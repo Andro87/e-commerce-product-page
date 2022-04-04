@@ -1,0 +1,24 @@
+.embla_slide_thumb {
+}
+.slide_btn {
+    border: none;
+    width: 88px;
+    height: 88px;
+    border-radius: 10px;
+    display: flex;
+    cursor: pointer;
+    overflow: hidden;
+}
+.slide_btn_img {
+    max-width: 100%;
+    transition: opacity 0.3s ease-in;
+    &:hover {
+        opacity: 0.5;
+    }
+}
+.selected {
+    border: 2px solid var(--Orange);
+}
+.selected .slide_btn_img {
+    opacity: 0.5;
+}
