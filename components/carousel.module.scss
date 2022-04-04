@@ -27,7 +27,9 @@
     position: relative;
     overflow: hidden;
     display: flex;
-    border-radius: 15px;
+    @media screen and (min-width: $desktop) {
+        border-radius: 15px;
+    }
 }
 
 .embla__slide__img {
