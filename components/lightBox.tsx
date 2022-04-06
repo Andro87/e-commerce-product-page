@@ -3,7 +3,7 @@ import styles from "./lightBox.module.scss";
 import Close from "../svgs/icon-close.svg";
 import Carousel from "./carousel";
 interface Props {
-    readonly onLight: Function;
+    readonly onLight: () => void;
 }
 const LightBox: React.FunctionComponent<Props> = props => {
     const { onLight } = props;
@@ -22,7 +22,6 @@ const LightBox: React.FunctionComponent<Props> = props => {
                 zoom="zoom"
                 zoomBtn="zoom_btn"
                 zoomContainer="embla_zoom"
-                onZoom={() => {}} //rivedere
             />
         </section>
     );

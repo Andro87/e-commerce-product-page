@@ -6,7 +6,7 @@ import Next from "../svgs/icon-next.svg";
 import ThumbImage from "./thumbImage";
 
 interface Props {
-    readonly onZoom?: Function;
+    readonly onZoom?: () => void;
     readonly zoom?: string;
     readonly zoomBtn?: string;
     readonly zoomContainer?: string;
@@ -44,7 +44,7 @@ const Carousel: React.FunctionComponent<Props> = props => {
                             <div className={styles.embla__slide} key={index}>
                                 <div
                                     className={styles.embla__slide__inner}
-                                    onClick={() => onZoom()}
+                                    onClick={() => onZoom?.()}
                                 >
                                     <img
                                         className={styles.embla__slide__img}

@@ -3,7 +3,7 @@ import styles from "./thumbImage.module.scss";
 
 interface Props {
     readonly image: string;
-    readonly onChoose: Function;
+    readonly onChoose: () => void;
     readonly selectedImage: string;
 }
 const ThumbImage: React.FunctionComponent<Props> = props => {
