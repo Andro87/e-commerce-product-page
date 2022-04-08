@@ -3,15 +3,23 @@ import styles from "./info.module.scss";
 import Cart from "../svgs/icon-cart.svg";
 import Plus from "../svgs/icon-plus.svg";
 import Minus from "../svgs/icon-minus.svg";
-interface Props {
-    readonly onRemove: Function;
-    readonly onAdd: Function;
-    readonly numberOfItems: number;
-    readonly onShowNumberOfItems: Function;
-}
+import BasketContext from "../contexts/BasketContext";
+import { useContext } from "react";
 
-const Info: React.FunctionComponent<Props> = props => {
-    const { onRemove, onAdd, numberOfItems, onShowNumberOfItems } = props;
+const Info: React.FunctionComponent = () => {
+    const context = useContext(BasketContext);
+    const [numberOfItems, setNumberOfItems] = context.numberOfItems;
+    const [showNumberOfItems, setShowNumberOfItems] = context.showNumberOfItems;
+
+    function removeItems() {
+        if (numberOfItems <= 0) {
+            return setNumberOfItems(0);
+        }
+        return setNumberOfItems(prevNumber => prevNumber - 1);
+    }
+    function addItems() {
+        return setNumberOfItems(prevNumber => prevNumber + 1);
+    }
     return (
         <>
             <h1>
@@ -38,7 +46,7 @@ const Info: React.FunctionComponent<Props> = props => {
                         type="button"
                         className={styles.button}
                         title="minus"
-                        onClick={() => onRemove()}
+                        onClick={removeItems}
                     >
                         <Minus />
                     </button>
@@ -47,7 +55,7 @@ const Info: React.FunctionComponent<Props> = props => {
                         type="button"
                         className={styles.button}
                         title="plus"
-                        onClick={() => onAdd()}
+                        onClick={addItems}
                     >
                         <Plus />
                     </button>
@@ -55,7 +63,7 @@ const Info: React.FunctionComponent<Props> = props => {
 
                 <div
                     className={styles.add_items}
-                    onClick={() => onShowNumberOfItems()}
+                    onClick={() => setShowNumberOfItems(true)}
                 >
                     <span>
                         <Cart />

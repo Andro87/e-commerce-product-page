@@ -51,10 +51,15 @@ Users should be able to:
 ### What I learned
 
 This project gave my the possibility to test my knowledge about React and to learn a new way to switch between images .
+It also allowed me to discover and start to learn about React Context and useContext().
 
 ### Useful resources
 
 -   [Embla](https://www.embla-carousel.com/) - A library that helped my to find a way to smoothly switch the image by clicking on the thumbnails images.
+
+-   [React Context for beginners](https://www.freecodecamp.org/news/react-context-for-beginners/) - A useful resource to start learning about React Context.
+
+-   [React Context and usecontext](https://dmitripavlutin.com/react-context-and-usecontext/#32-when-context-changes) - Another great resource that helped me to have a better understanding of React Context.
 
 ## Author
 
