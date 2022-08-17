@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
-import styles from "./header.module.scss";
-import Menu from "../svgs/icon-menu.svg";
-import Close from "../svgs/icon-close.svg";
-import Logo from "../svgs/logo.svg";
-import Cart from "../svgs/icon-cart.svg";
-import Delete from "../svgs/icon-delete.svg";
-import BasketContext from "../contexts/BasketContext";
+import styles from "./Header.module.scss";
+import Menu from "svgs/icon-menu.svg";
+import Close from "svgs/icon-close.svg";
+import Logo from "svgs/logo.svg";
+import Cart from "svgs/icon-cart.svg";
+import Delete from "svgs/icon-delete.svg";
+import BasketContext from "contexts/BasketContext";
 
-const Header: React.FunctionComponent = () => {
+export const Header: React.FunctionComponent = () => {
     //
     const context = useContext(BasketContext);
     const [open, setOpen] = context.open;
@@ -118,5 +118,3 @@ const Header: React.FunctionComponent = () => {
         </header>
     );
 };
-
-export default Header;

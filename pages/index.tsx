@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import BasketContext from "../contexts/BasketContext";
-import MainContainer from "../components/mainContainer";
+import BasketContext from "contexts/BasketContext";
+import { MainContainer } from "components";
 export default function Home() {
     //
 

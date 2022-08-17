@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./thumbImage.module.scss";
+import styles from "./ThumbImage.module.scss";
 
 interface Props {
     readonly image: string;
     readonly onChoose: () => void;
     readonly selectedImage: string;
 }
-const ThumbImage: React.FunctionComponent<Props> = props => {
+export const ThumbImage: React.FunctionComponent<Props> = props => {
     const { image, onChoose, selectedImage } = props;
 
     return (
@@ -26,5 +26,3 @@ const ThumbImage: React.FunctionComponent<Props> = props => {
         </div>
     );
 };
-
-export default ThumbImage;

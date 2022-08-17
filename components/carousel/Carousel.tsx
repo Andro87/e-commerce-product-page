@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import styles from "./carousel.module.scss";
+import styles from "./Carousel.module.scss";
 import useEmblaCarousel from "embla-carousel-react";
-import Prev from "../svgs/icon-previous.svg";
-import Next from "../svgs/icon-next.svg";
-import ThumbImage from "./thumbImage";
+import Prev from "svgs/icon-previous.svg";
+import Next from "svgs/icon-next.svg";
+import { ThumbImage } from "components";
 
 interface Props {
     readonly onZoom?: () => void;
@@ -11,7 +11,7 @@ interface Props {
     readonly zoomBtn?: string;
     readonly zoomContainer?: string;
 }
-const Carousel: React.FunctionComponent<Props> = props => {
+export const Carousel: React.FunctionComponent<Props> = props => {
     const { onZoom, zoom, zoomBtn, zoomContainer } = props;
     const [mainViewportRef, emblaApi] = useEmblaCarousel({
         loop: true
@@ -99,5 +99,3 @@ const Carousel: React.FunctionComponent<Props> = props => {
         </>
     );
 };
-
-export default Carousel;

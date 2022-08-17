@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./lightBox.module.scss";
-import Close from "../svgs/icon-close.svg";
-import Carousel from "./carousel";
+import styles from "./LightBox.module.scss";
+import Close from "svgs/icon-close.svg";
+import { Carousel } from "components";
 interface Props {
     readonly onLight: () => void;
 }
-const LightBox: React.FunctionComponent<Props> = props => {
+export const LightBox: React.FunctionComponent<Props> = props => {
     const { onLight } = props;
 
     return (
@@ -26,5 +26,3 @@ const LightBox: React.FunctionComponent<Props> = props => {
         </section>
     );
 };
-
-export default LightBox;

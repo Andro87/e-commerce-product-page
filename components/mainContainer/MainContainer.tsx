@@ -1,15 +1,12 @@
 import React, { useContext, useState } from "react";
-import styles from "../styles/Home.module.scss";
+import styles from "./MainContainer.module.scss";
 
 import Head from "next/head";
-import Header from "../components/header";
-import Carousel from "../components/carousel";
-import Info from "../components/info";
-import LightBox from "../components/lightBox";
+import { Header, Carousel, Info, LightBox } from "components";
 
-import BasketContext from "../contexts/BasketContext";
+import BasketContext from "../../contexts/BasketContext";
 
-const MainContainer: React.FunctionComponent = () => {
+export const MainContainer: React.FunctionComponent = () => {
     //
     const context = useContext(BasketContext);
     const [open, setOpen] = context.open;
@@ -46,5 +43,3 @@ const MainContainer: React.FunctionComponent = () => {
         </div>
     );
 };
-
-export default MainContainer;

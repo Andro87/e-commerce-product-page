@@ -1,12 +1,12 @@
 import React from "react";
-import styles from "./info.module.scss";
-import Cart from "../svgs/icon-cart.svg";
-import Plus from "../svgs/icon-plus.svg";
-import Minus from "../svgs/icon-minus.svg";
-import BasketContext from "../contexts/BasketContext";
+import styles from "./Info.module.scss";
+import Cart from "svgs/icon-cart.svg";
+import Plus from "svgs/icon-plus.svg";
+import Minus from "svgs/icon-minus.svg";
+import BasketContext from "contexts/BasketContext";
 import { useContext } from "react";
 
-const Info: React.FunctionComponent = () => {
+export const Info: React.FunctionComponent = () => {
     const context = useContext(BasketContext);
     const [numberOfItems, setNumberOfItems] = context.numberOfItems;
     const [showNumberOfItems, setShowNumberOfItems] = context.showNumberOfItems;
@@ -80,5 +80,3 @@ const Info: React.FunctionComponent = () => {
         </>
     );
 };
-
-export default Info;
